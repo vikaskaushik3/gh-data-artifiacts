@@ -40,7 +40,7 @@ jobs:
       - name: Deploy
         run: echo "Deploying..."
       - name: Download artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: dist-files
       - name: Output the list of files in downloaded job artifact
