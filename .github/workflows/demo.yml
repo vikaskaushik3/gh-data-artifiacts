@@ -44,4 +44,4 @@ jobs:
         with:
           name: dist-files
       - name: Output the list of files in downloaded job artifact
-        run: ls
+        run: ls */*
