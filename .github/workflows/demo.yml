@@ -19,8 +19,7 @@ jobs:
           restore-keys: deps-node-modules-
 
       - name: Install dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
-        continue-on-error: true
+        if: steps.cache.outputs.cache-hit == 'true'
         run: npm ci
 
       - name: Lint code
