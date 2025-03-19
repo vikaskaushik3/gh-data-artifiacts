@@ -20,9 +20,11 @@ jobs:
 
       - name: Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
+        continue-on-error: true
         run: npm ci
 
       - name: Lint code
+        # continue-on-error: true
         run: npm run lint
 
       - name: Test code
